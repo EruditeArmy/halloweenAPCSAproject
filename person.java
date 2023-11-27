@@ -5,11 +5,13 @@ import java.util.Random;
 
 public class person {
 
+    // instance variables used in simulation
     private int numOfCandy = 0;
     private String name;
     private String costume;
     private int numOfHousesVisited;
 
+    // the object with needed parameters
     public person(int numOfHousesVisited, String name, String costume){
 
         this.numOfHousesVisited = numOfHousesVisited;
@@ -17,6 +19,7 @@ public class person {
         this.costume = costume;
     }
 
+    // Trick or treat method 
     public String trickOrTreat(boolean houseDecor, int numOfTricks){
 
         if(houseDecor == true){
@@ -51,6 +54,7 @@ public class person {
             
     }
 
+    // adds number of candy to the grand total amount of candy per every house
     public String addNumOfCandy(int currentHouse){
 
         Random rand = new Random();
@@ -60,7 +64,7 @@ public class person {
         return "collected " + rand.nextInt(100) + " pieces of candy from " + house.houseAddress(currentHouse) + "\nGrand total : " + numOfCandy;
     }
 
-
+    // get methods ->
     public String getName(){
         return name;
     }

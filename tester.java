@@ -17,7 +17,7 @@ public class tester {
         //To be use for random amount of tricks
         Random rand = new Random();
 
-
+        //Iterates through all of the names and costumes while printing out the result of simulation
         for(int i = 0; i<ammountOfTrickOrTreaters; i++){
 
             person myTrickerTreater1 = new person(ammountOfTrickOrTreaters, name[i], costume[i]);
@@ -44,6 +44,7 @@ public class tester {
         
     }
 
+    //used to return odds as if it was a coinflip for certain aspects of simulation
     public static boolean coinflip(int range){
 
         Random rand = new Random();
